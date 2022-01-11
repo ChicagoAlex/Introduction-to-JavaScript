@@ -53,9 +53,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-let stringVariable = '33';
-Number(stringVariable);
-console.log(stringVariable);
+let numString = '1999';
+Math.round(numString);
+console.log(numString);
 
 
 
@@ -117,10 +117,26 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(age, weight){
+  if(age >= 1){
+    if(weight <= 5){
+    return weight * .05;
+    }else if(weight >= 6 && weight <= 10){
+      return weight * .04;
+    }else if(weight >= 11 && weight <= 15){
+      return weight * .03;
+    }else{
+      return weight * .02;
+    }
+  } else if(age >= 2/12 && age <= 4/12){
+    return weight * .1;
+  } else if(age >= 4/12 && age <= 7/12){
+    return weight * .05
+  } else{
+    return weight * .04 
+  }
 }
-
+console.log(hungryDog(1, 15));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
