@@ -130,10 +130,10 @@ function hungryDog(weight, age){
     }
   } else if(age >= 2/12 && age <= 4/12){
     return weight * .1;
-  } else if(age >= 4/12 && age <= 7/12){
-    return weight * .05
-  } else{
-    return weight * .04 
+  } else if(age >= 4/12 && age < .582){
+    return weight * .05;
+  } else if(age >= .582 && age < 1){
+    return weight * .04;
   }
 }
 console.log(hungryDog(4, 1));
@@ -161,9 +161,27 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.floor(Math.random() * 3)
+if(computer === 0){
+  computer = 'rock'
+}else if(computer === 1){
+  computer = 'paper'
+}else{
+  computer = 'scissors'
+}
 
 function game(user, computer){
-  /*add your code here*/
+  if(user === computer){
+    return "It's a tie";
+  }else if(user === 'rock' && computer === 'scissors'){
+    return 'you win!';
+  }else if(user === 'paper' && computer === 'rock'){
+    return 'you win!';
+  }else if(user === 'scissors' && computer === 'paper'){
+    return 'you win!';
+  }else{
+    return 'you lose!'
+  }
 }
 
 
